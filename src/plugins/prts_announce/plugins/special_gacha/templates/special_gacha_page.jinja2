@@ -1,0 +1,9 @@
+{{DISPLAYTITLE:{{SUBPAGENAME}}}}
+<!--{{副标题|}}{{Cquote|}}-->
+{%- if limit %}
+{{寻访模拟器|卡池参数=config>gacha_type:limit,operator_start_time:20200501,operator_end_time:{$ starttime $},gacha_image:{$ gacha_name $}.{$suffix$}
+star_5>up:{$ six_chars | join('.') $},percent:70,other:
+star_4>up:{$ five_chars | join('.') $},except:闪击.霜华.火龙S黑角}}
+{%- else %}
+{{寻访模拟器|卡池参数=config>gacha_type:normal2,operator_end_time:{$ starttime $},operator_start_time:20200501,gacha_image:{$ gacha_name $}.{$suffix$};star_5>up:{$ six_chars | join('.') $};star_4>up:{$ five_chars | join(',') $}}}
+{% endif -%}

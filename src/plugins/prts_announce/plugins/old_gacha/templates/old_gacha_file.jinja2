@@ -1,0 +1,14 @@
+{{寻访信息
+|寻访名cn=中坚干员轮换卡池{$ id $}
+|卡池名=寻访模拟/中坚干员轮换卡池{$ id $}
+|寻访类型={$ type $}
+{% if middle_type_cat -%}
+|中坚寻访分类={$ middle_type_cat $}
+{%- endif %}
+|寻访开启时间cn={$ starttime $}
+|寻访关闭时间cn={$ endtime $}
+|出率提升干员={$ all_chars | join(',') $}
+{% if stores_chars -%}
+|商店兑换干员={$ stores_chars | join(',') $}
+{%- endif %}
+}}

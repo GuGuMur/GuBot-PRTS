@@ -1,0 +1,18 @@
+[project]
+name = "GuBot"
+version = "GuBot for QQ"
+description = "None"
+authors = [
+    {name = "GuGuMur", email = "2221533105@qq.com"},
+]
+dependencies = []
+requires-python = ">=3.10"
+license = {text = "MIT"}
+
+[tool.nonebot]
+adapters = [
+    { name = "OneBot V11", module_name = "nonebot.adapters.onebot.v11" }
+]
+plugins = ["nonebot_plugin_apscheduler", "nonebot_plugin_localstore", "nonebot_plugin_datastore"]
+plugin_dirs = ["src/plugins"]
+builtin_plugins = ["echo", "single_session"]
