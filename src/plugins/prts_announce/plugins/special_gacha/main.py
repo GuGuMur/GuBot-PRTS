@@ -143,7 +143,7 @@ async def main(id: str, gacha_name:str, limit:bool=False):
             f"""<!-- Bot Edit Anchor SINGLE -->\n{table_wiki}""",
         )
     # print(text2)
-    await bot.create_page(title="卡池一览/限时寻访",text=text2,summary=f"Bot Edit SINGLE:{id}")
+    await bot.edit_page(title="卡池一览/限时寻访",text=text2,summary=f"Bot Edit SINGLE:{id}")
     
     # FOR 文件：
     filepath = await down_pic(link=announce_info["pic_link"], name=f"{gacha_name}.{announce_info['pic_suffix']}")
@@ -152,7 +152,7 @@ async def main(id: str, gacha_name:str, limit:bool=False):
     os.remove(filepath)
 
     # FOR 对应的寻访页面
-    await bot.edit_page(title=f"寻访模拟/{gacha_name}",text=single_page_wiki,summary="//Edit by bot.")
+    await bot.create_page(title=f"寻访模拟/{gacha_name}",text=single_page_wiki,summary="//Edit by bot.")
 
 
 # if __name__ == "__main__":
